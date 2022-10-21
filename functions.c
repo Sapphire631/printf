@@ -1,10 +1,15 @@
 #include "main.h"
 
 /************************* PRINT CHAR *************************/
+
 /**
  * print_char - Prints a char
  * @types: List a of arguments
+<<<<<<< HEAD
  * @buffer: Buffer array to handleprint
+=======
+ * @buffer: Buffer array to handle print
+>>>>>>> ab00c7f9d8a77a72830b6eb481d7d2bf2fc26d88
  * @flags:  Calculates active flags
  * @width: Width
  * @precision: Precision specification
@@ -29,6 +34,7 @@ int print_char(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Number of chars printed
  */
+
 int print_string(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
@@ -40,13 +46,13 @@ int print_string(va_list types, char buffer[],
 	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
-
 	if (str == NULL)
 	{
 		str = "(null)";
 		if (precision >= 6)
 			str = "      ";
 	}
+
 	while (str[length] != '\0')
 		length++;
 
@@ -84,6 +90,7 @@ int print_string(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Number of chars printed
  */
+
 int print_percent(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
@@ -139,7 +146,6 @@ int print_int(va_list types, char buffer[],
 
 	return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
-
 /************************* PRINT BINARY *************************/
 /**
  * print_binary - Prints an unsigned number
